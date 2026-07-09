@@ -44,7 +44,7 @@ final class CategoryController extends AbstractController
                     $newFilename
                 );
 
-                $article->setImage($newFilename);
+                $category->setPhoto($newFilename);
             }
             $entityManager->persist($category);
             $entityManager->flush();

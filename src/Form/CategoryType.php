@@ -9,6 +9,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\File;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 
+
 class CategoryType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
@@ -25,7 +26,7 @@ class CategoryType extends AbstractType
                         mimeTypes: [
                             'image/*',
                         ],
-                        mimeTypeMessage: 'Image trop lourde',
+                        mimeTypesMessage: 'Image trop lourde',
                     )
                 ],
             ])

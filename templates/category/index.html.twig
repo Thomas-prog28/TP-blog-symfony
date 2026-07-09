@@ -11,21 +11,23 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>actions</th>
+                <th>Photos</th>
             </tr>
         </thead>
         <tbody>
         {% for category in categories %}
-            <tr>
+            <tr class="align-middle">
                 <td>{{ category.id }}</td>
                 <td>{{ category.name }}</td>
                 <td>
                     <a href="{{ path('app_category_show', {'id': category.id}) }}">show</a>
                     <a href="{{ path('app_category_edit', {'id': category.id}) }}">edit</a>
                 </td>
+                <td><img src="{{ asset('uploads/images/' ~ category.photo) }}" width="100"></td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="3">no records found</td>
+                <td colspan="4">no records found</td>
             </tr>
         {% endfor %}
         </tbody>
